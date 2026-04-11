@@ -48,20 +48,20 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <div className="p-5">
-          <p className="text-xs text-brand-500 font-semibold uppercase tracking-wider mb-1 capitalize">
+          <p className="text-xs font-semibold uppercase tracking-wider mb-1 capitalize" style={{ color: "var(--accent-gold)" }}>
             {project.category}
           </p>
-          <h3 className="text-lg font-display font-semibold text-charcoal-900 group-hover:text-brand-500 transition-colors line-clamp-2">
+          <h3 className="text-lg font-display font-semibold transition-colors line-clamp-2" style={{ color: "var(--accent-gold)" }}>
             {project.title}
           </h3>
-          <div className="mt-3 flex flex-wrap gap-3 text-sm text-gray-500">
+          <div className="mt-3 flex flex-wrap gap-3 text-sm" style={{ color: "var(--text-secondary)" }}>
             <span className="flex items-center gap-1">
-              <MapPin size={14} className="text-brand-400" />
+              <MapPin size={14} style={{ color: "var(--accent-gold)" }} />
               {project.location}
             </span>
             {project.area_sqft && (
               <span className="flex items-center gap-1">
-                <Ruler size={14} className="text-brand-400" />
+                <Ruler size={14} style={{ color: "var(--accent-gold)" }} />
                 {project.area_sqft.toLocaleString()} sq.ft
               </span>
             )}

@@ -95,7 +95,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-40 flex flex-col"
+            className="fixed inset-0 z-[60] flex flex-col"
             style={{ background: "var(--bg-secondary)" }}
           >
             <div className="flex items-center justify-between h-20 container-custom">
