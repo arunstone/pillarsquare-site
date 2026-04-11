@@ -35,15 +35,15 @@ export default function AboutPage() {
       </Helmet>
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-charcoal-950 overflow-hidden">
+      <section className="relative pt-32 pb-20 overflow-hidden" style={{ background: "var(--bg-primary)" }}>
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: "url('/about-bg.jpg')" }}
         />
         <div className="container-custom relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <p className="section-subtitle text-brand-400 mb-4">Our Story</p>
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-white">
+            <p className="text-sm uppercase tracking-widest mb-4" style={{ color: "var(--accent-gold)" }}>Our Story</p>
+            <h1 className="text-4xl md:text-5xl font-display font-bold" style={{ color: "var(--text-primary)" }}>
               Building Chennai for 18+ Years
             </h1>
           </motion.div>
@@ -51,7 +51,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story */}
-      <section className="py-20">
+      <section className="py-20" style={{ background: "var(--bg-primary)" }}>
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <motion.div
@@ -63,17 +63,17 @@ export default function AboutPage() {
                 subtitle="Who We Are"
                 title="A Legacy of Excellence in Construction"
               />
-              <p className="mt-5 text-gray-600 leading-relaxed">
+              <p className="mt-5 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
                 Founded in 2005, Pillar Square Properties has grown from a small Chennai-based
                 construction firm into one of the most trusted names in the industry. We've
                 built over 200 homes, commercial spaces, and landmark structures across the city.
               </p>
-              <p className="mt-4 text-gray-600 leading-relaxed">
+              <p className="mt-4 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
                 Our approach combines traditional craftsmanship with modern technology —
                 ensuring every structure stands the test of time. We believe a building is more
                 than concrete and steel; it's where memories are made.
               </p>
-              <Link to="/contact" className="btn-primary mt-8 inline-flex">
+              <Link to="/contact" className="btn-gold mt-8 inline-flex">
                 Work With Us
               </Link>
             </motion.div>
@@ -85,7 +85,7 @@ export default function AboutPage() {
               className="rounded-2xl overflow-hidden aspect-[4/3]"
             >
               <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+                src="/uploads/about-team.jpg"
                 alt="Pillar Square Team"
                 className="w-full h-full object-cover"
               />
@@ -95,7 +95,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20" style={{ background: "var(--bg-secondary)" }}>
         <div className="container-custom">
           <SectionHeader
             subtitle="Our Values"
@@ -110,13 +110,18 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex gap-5 p-6 bg-white rounded-2xl shadow-sm"
+                className="flex gap-5 p-6 rounded-2xl"
+                style={{
+                  background: "var(--glass)",
+                  border: "1px solid var(--border)",
+                  backdropFilter: "blur(20px)",
+                }}
               >
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style={{ background: "var(--bg-elevated)", color: "var(--accent-gold)" }}>
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style={{ background: "rgba(200,169,81,0.1)", border: "1px solid rgba(200,169,81,0.3)", color: "var(--accent-gold)" }}>
                   {v.icon}
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1" style={{ color: "var(--text-primary)" }}>{v.title}</h3>
+                  <h3 className="font-semibold mb-1" style={{ color: "var(--accent-gold)" }}>{v.title}</h3>
                   <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{v.desc}</p>
                 </div>
               </motion.div>

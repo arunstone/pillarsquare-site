@@ -205,7 +205,7 @@ function TiltProjectCard({ project, delay = 0 }: { project: Project; delay?: num
         >
           <div className="overflow-hidden aspect-[4/3]">
             <img
-              src={project.featured_image || "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800"}
+              src={project.featured_image || "/uploads/about-craftsmanship.jpg"}
               alt={project.title}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
@@ -488,7 +488,7 @@ export default function Home() {
         <motion.div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat will-change-transform"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80')",
+            backgroundImage: "url('/uploads/hero-bg.jpg')",
             y: bgY,
             scale: 1.15,
           }}
@@ -637,7 +637,7 @@ export default function Home() {
               />
               <div className="overflow-hidden aspect-[4/3]">
                 <img
-                  src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80"
+                  src="/uploads/about-craftsmanship.jpg"
                   alt="Pillar Square craftsmanship"
                   className="w-full h-full object-cover"
                 />
