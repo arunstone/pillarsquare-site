@@ -1,0 +1,35 @@
+# Web framework
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+
+# Database
+sqlalchemy[asyncio]==2.0.29
+asyncpg==0.29.0
+alembic==1.13.1
+psycopg2-binary==2.9.9
+
+# Settings & validation
+pydantic==2.6.4
+pydantic-settings==2.2.1
+
+# Auth / security
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+python-multipart==0.0.9
+
+# Telegram bot
+python-telegram-bot==20.8
+
+# Utilities
+python-slugify==8.0.4
+Pillow==10.3.0
+aiofiles==23.2.1
+
+# Rate limiting
+slowapi==0.1.9
+
+# Linting / dev
+httpx~=0.26.0
+
+email-validator
+gunicorn

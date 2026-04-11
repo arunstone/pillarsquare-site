@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-elevated: #1a1a28;
+    --accent-gold: #c8a951;
+    --accent-gold-light: #e8d48b;
+    --text-primary: #f0ece4;
+    --text-secondary: #9a9a9a;
+    --border: rgba(200, 169, 81, 0.15);
+    --glass: rgba(18, 18, 26, 0.7);
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-image: radial-gradient(circle, rgba(200, 169, 81, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: var(--text-primary);
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(18, 18, 26, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(200, 169, 81, 0.12);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .glass:hover {
+    border-color: rgba(200, 169, 81, 0.4);
+    box-shadow: 0 0 30px rgba(200, 169, 81, 0.08);
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-sm font-medium uppercase tracking-widest transition-all duration-300;
+    background: var(--accent-gold);
+    color: var(--bg-primary);
+  }
+
+  .btn-gold:hover {
+    background: var(--accent-gold-light);
+  }
+
+  .btn-outline-gold {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-sm font-medium uppercase tracking-widest transition-all duration-300;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+  }
+
+  .btn-outline-gold:hover {
+    background: var(--accent-gold);
+    color: var(--bg-primary);
+  }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+    opacity: 0.3;
+  }
+
+  .text-gold {
+    color: var(--accent-gold);
+  }
+
+  .text-gold-light {
+    color: var(--accent-gold-light);
+  }
+
+  .bg-elevated {
+    background-color: var(--bg-elevated);
+  }
+
+  .bg-secondary-custom {
+    background-color: var(--bg-secondary);
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Legacy classes kept for existing pages */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 font-semibold transition-colors duration-200;
+    background: var(--accent-gold);
+    color: var(--bg-primary);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 font-semibold transition-colors duration-200;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 outline-none transition-colors duration-200;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+  }
+
+  .form-input:focus {
+    border-color: var(--accent-gold);
+  }
+
+  .form-input::placeholder {
+    color: var(--text-secondary);
+  }
+}

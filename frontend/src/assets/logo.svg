@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 50" fill="none">
+  <!-- Outer square -->
+  <rect x="3" y="5" width="36" height="36" fill="none" stroke="#c8a951" stroke-width="2"/>
+  
+  <!-- Pillar 1 -->
+  <rect x="9" y="8" width="6" height="2" fill="#c8a951"/>
+  <rect x="10" y="10" width="1" height="24" fill="#c8a951"/>
+  <rect x="11.5" y="10" width="1" height="24" fill="#c8a951"/>
+  <rect x="13" y="10" width="1" height="24" fill="#c8a951"/>
+  <rect x="9" y="34" width="6" height="2" fill="#c8a951"/>
+  
+  <!-- Pillar 2 -->
+  <rect x="18" y="8" width="6" height="2" fill="#c8a951" opacity="0.85"/>
+  <rect x="19" y="10" width="1" height="24" fill="#c8a951" opacity="0.85"/>
+  <rect x="20.5" y="10" width="1" height="24" fill="#c8a951" opacity="0.85"/>
+  <rect x="22" y="10" width="1" height="24" fill="#c8a951" opacity="0.85"/>
+  <rect x="18" y="34" width="6" height="2" fill="#c8a951" opacity="0.85"/>
+  
+  <!-- Pillar 3 -->
+  <rect x="27" y="8" width="6" height="2" fill="#c8a951" opacity="0.7"/>
+  <rect x="28" y="10" width="1" height="24" fill="#c8a951" opacity="0.7"/>
+  <rect x="29.5" y="10" width="1" height="24" fill="#c8a951" opacity="0.7"/>
+  <rect x="31" y="10" width="1" height="24" fill="#c8a951" opacity="0.7"/>
+  <rect x="27" y="34" width="6" height="2" fill="#c8a951" opacity="0.7"/>
+  
+  <!-- Text -->
+  <text x="48" y="25" font-family="serif" font-size="18" font-weight="600" fill="#f0ece4" letter-spacing="1.5">PILLAR SQUARE</text>
+  <text x="48" y="42" font-family="sans-serif" font-size="10" font-weight="400" fill="#c8a951" letter-spacing="3">PROPERTIES</text>
+</svg>
