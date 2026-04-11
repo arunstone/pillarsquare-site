@@ -112,12 +112,12 @@ export default function AboutPage() {
                 transition={{ delay: i * 0.1 }}
                 className="flex gap-5 p-6 bg-white rounded-2xl shadow-sm"
               >
-                <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center shrink-0 text-brand-500">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style={{ background: "var(--bg-elevated)", color: "var(--accent-gold)" }}>
                   {v.icon}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-charcoal-900 mb-1">{v.title}</h3>
-                  <p className="text-sm text-gray-500">{v.desc}</p>
+                  <h3 className="font-semibold mb-1" style={{ color: "var(--text-primary)" }}>{v.title}</h3>
+                  <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{v.desc}</p>
                 </div>
               </motion.div>
             ))}

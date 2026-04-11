@@ -57,7 +57,7 @@ export default function HomePage() {
             </p>
             <h1 className="text-4xl md:text-6xl font-display font-bold text-white leading-tight">
               Building Dreams,{" "}
-              <span className="text-brand-500">Crafting Legacies</span>
+              <span style={{ color: "var(--accent-gold)" }}>Crafting Legacies</span>
             </h1>
             <p className="mt-6 text-lg text-gray-300 leading-relaxed">
               From luxury villas to commercial complexes — Pillar Square Properties delivers
@@ -67,7 +67,7 @@ export default function HomePage() {
               <Link to="/projects" className="btn-primary">
                 View Our Projects <ArrowRight size={18} />
               </Link>
-              <Link to="/contact" className="btn-outline border-white text-white hover:bg-white hover:text-charcoal-900">
+              <Link to="/contact" className="btn-outline border-white text-white hover:bg-white">
                 Get a Quote
               </Link>
             </div>
@@ -154,13 +154,13 @@ export default function HomePage() {
                 transition={{ delay: i * 0.08 }}
                 className="p-6 rounded-2xl border border-gray-100 hover:border-brand-200 hover:shadow-md transition-all"
               >
-                <div className="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center mb-4">
-                  <Building2 size={24} className="text-brand-500" />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: "var(--bg-elevated)" }}>
+                  <Building2 size={24} style={{ color: "var(--accent-gold)" }} />
                 </div>
-                <h3 className="font-display font-semibold text-lg text-charcoal-900 mb-2">
+                <h3 className="font-display font-semibold text-lg mb-2" style={{ color: "var(--text-primary)" }}>
                   {s?.title ?? <span className="inline-block w-32 h-4 bg-gray-200 rounded animate-pulse" />}
                 </h3>
-                <p className="text-sm text-gray-500 leading-relaxed">
+                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
                   {s?.description ?? (
                     <span className="inline-block w-full h-3 bg-gray-100 rounded animate-pulse" />
                   )}
@@ -201,7 +201,7 @@ export default function HomePage() {
                 </p>
                 <div className="mt-4 border-t border-white/10 pt-4">
                   <p className="text-white font-semibold">{t?.client_name ?? "..."}</p>
-                  <p className="text-gray-500 text-xs">{t?.client_role}</p>
+                  <p className="text-xs" style={{ color: "var(--text-secondary)" }}>{t?.client_role}</p>
                 </div>
               </motion.div>
             ))}
