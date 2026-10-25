@@ -19,6 +19,9 @@ class Settings(BaseSettings):
     ADMIN_EMAIL: str = "admin@example.com"
     ADMIN_PASSWORD: str = "changeme"
 
+    # Public site URL (used in Telegram bot links)
+    SITE_URL: str = "https://example.com"
+
     # Telegram
     TELEGRAM_BOT_TOKEN: str = ""
     TELEGRAM_ADMIN_CHAT_ID: str = ""

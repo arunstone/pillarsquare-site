@@ -7,6 +7,7 @@ from app.database import AsyncSessionLocal
 from app.models.inquiry import Inquiry, InquirySource
 from app.models.project import Project
 from app.models.telegram_chat import TelegramChat
+from app.config import settings
 from app.services.notification import notify_admin_new_inquiry
 from sqlalchemy import select
 
@@ -69,7 +70,7 @@ async def start_handler(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> None:
             InlineKeyboardButton("🏗 Our Projects", callback_data="projects"),
             InlineKeyboardButton("📞 Contact Us", callback_data="contact"),
         ],
-        [InlineKeyboardButton("🌐 Visit Website", url="https://example.com")],
+        [InlineKeyboardButton("🌐 Visit Website", url=settings.SITE_URL)],
     ]
     await update.message.reply_text(
         WELCOME_TEXT,
@@ -106,7 +107,7 @@ async def projects_handler(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> No
             f"{status_emoji} *{p.title}*\n"
             f"   📍 {p.location or 'Chennai'}  |  {p.category.value.capitalize()}\n"
         )
-    lines.append("\nView all: https://example.com/projects")
+    lines.append(f"\nView all: {settings.SITE_URL}/projects")
 
     msg = update.message or update.callback_query.message
     await msg.reply_text("\n".join(lines), parse_mode="Markdown")

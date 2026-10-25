@@ -186,7 +186,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Pillar Square Properties. All rights reserved.
           </p>
           <p className="text-xs" style={{ color: "var(--text-secondary)" }}>
-            example.com
+            {window.location.host}
           </p>
         </div>
       </div>
